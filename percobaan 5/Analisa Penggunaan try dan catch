@@ -1,0 +1,21 @@
+    Blok try:
+        Blok try digunakan untuk membungkus kode yang mungkin menghasilkan error. Dalam hal ini, System.out.println(bil / 0) akan menghasilkan ArithmeticException karena pembagian dengan nol.
+
+    Blok catch (ArithmeticException e):
+        Jika terjadi ArithmeticException (yaitu pembagian dengan nol), blok ini akan dijalankan.
+        Di dalam blok ini, beberapa hal dilakukan:
+            System.out.println("Pesan error: ");: Mencetak pesan statis yang menandakan bahwa ada pesan error yang akan diikuti.
+            System.out.println(e.getMessage());: Mencetak pesan error yang dihasilkan oleh ArithmeticException. Untuk ArithmeticException, pesan ini biasanya adalah "/ by zero".
+            System.out.println("Info stack erase");: Mencetak pesan statis yang menandakan bahwa informasi stack trace akan diikuti.
+            e.printStackTrace();: Mencetak stack trace dari exception ke standar error. Stack trace memberikan informasi rinci tentang jalannya eksekusi program saat exception terjadi.
+            e.printStackTrace(System.out);: Mencetak stack trace dari exception ke standar output. Ini berguna jika ingin melihat stack trace di output yang sama dengan pesan lainnya.
+
+    Blok catch (Exception e):
+        Jika ada exception lain selain ArithmeticException yang terjadi, blok ini akan menangkapnya.
+        System.out.println("Ini menghandle error yang terjadi");: Mencetak pesan yang menunjukkan bahwa error lain telah ditangani. Dalam contoh ini, blok ini tidak akan dieksekusi karena ArithmeticException sudah ditangkap oleh blok catch sebelumnya.
+
+Kesimpulan
+
+    Blok try digunakan untuk mencoba menjalankan kode yang mungkin menghasilkan exception.
+    Blok catch (ArithmeticException e) digunakan untuk menangani error spesifik, yaitu ArithmeticException. Ini memberikan penanganan yang lebih rinci dan informatif untuk jenis error tersebut.
+    Blok catch (Exception e) digunakan untuk menangani semua jenis exception lainnya yang tidak ditangani oleh blok catch sebelumnya.

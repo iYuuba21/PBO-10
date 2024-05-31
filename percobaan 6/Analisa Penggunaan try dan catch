@@ -1,0 +1,24 @@
+    Metode demo():
+        Metode demo mendeklarasikan dan menginisialisasi objek NullPointerException dengan pesan "Coba Throw".
+        Menggunakan pernyataan throw untuk melemparkan objek NullPointerException. Ketika exception dilemparkan, eksekusi metode segera dihentikan, dan kontrol dialihkan ke blok catch yang sesuai.
+        Pernyataan System.out.println("Ini tidak lagi dicetak"); tidak akan pernah dijalankan karena exception dilemparkan sebelumnya.
+
+    Blok try di main:
+        Blok try digunakan untuk mencoba menjalankan metode demo().
+        Jika demo() melemparkan NullPointerException, eksekusi akan segera berpindah ke blok catch yang sesuai, dan pernyataan System.out.println("Selesai"); tidak akan pernah dijalankan.
+
+    Blok catch (NullPointerException e) di main:
+        Blok catch menangkap NullPointerException yang dilemparkan oleh metode demo().
+        Dalam blok catch, pesan "Ada pesan error: " diikuti oleh representasi string dari exception (e). Representasi ini mencakup nama exception dan pesan yang diteruskan ke konstruktor exception ("Coba Throw").
+
+Kesimpulan
+
+    Metode demo():
+        Metode ini mendemonstrasikan cara melempar exception secara eksplisit menggunakan pernyataan throw.
+        Setelah exception dilemparkan, setiap kode setelah throw tidak akan dieksekusi.
+
+    Blok try di main:
+        Blok try digunakan untuk mencoba menjalankan kode yang mungkin melempar exception. Dalam kasus ini, metode demo().
+
+    Blok catch (NullPointerException e) di main:
+        Blok catch menangkap NullPointerException yang dilemparkan dan menangani exception tersebut dengan mencetak pesan error yang relevan.

@@ -1,0 +1,21 @@
+    Blok try:
+        Blok try digunakan untuk membungkus kode yang mungkin menghasilkan exception.
+        Dalam blok ini, exception secara eksplisit dilempar menggunakan pernyataan throw new Exception("Here's my Exception"). Ini membuat instance baru dari Exception dengan pesan "Here's my Exception".
+
+    Blok catch (Exception e):
+        Blok catch menangkap Exception yang dilempar oleh blok try.
+        Di dalam blok catch, beberapa hal dilakukan:
+            System.out.println("Caught Exception");: Mencetak pesan yang menunjukkan bahwa exception telah tertangkap.
+            System.out.println("e.getMessage(): " + e.getMessage());: Mencetak pesan error yang diteruskan ke konstruktor exception. Dalam hal ini, pesan adalah "Here's my Exception".
+            System.out.println("e.toString(): " + e.toString());: Mencetak representasi string dari exception. Ini biasanya mencakup nama kelas exception dan pesan error. Untuk Exception, ini akan mencetak java.lang.Exception: Here's my Exception.
+            System.out.println("e.printStackTrace():");: Mencetak pesan yang menunjukkan bahwa stack trace akan diikuti.
+            e.printStackTrace();: Mencetak stack trace dari exception ke standar error. Stack trace memberikan informasi rinci tentang jalannya eksekusi program saat exception terjadi.
+
+Kesimpulan
+
+    Blok try digunakan untuk membungkus kode yang mungkin menghasilkan exception. Dalam hal ini, exception secara eksplisit dilempar.
+    Blok catch (Exception e) digunakan untuk menangkap dan menangani exception yang dilempar oleh blok try.
+    Setelah exception tertangkap, berbagai metode dari objek exception (e) digunakan untuk memberikan informasi rinci tentang exception:
+        e.getMessage() mengembalikan pesan yang ditentukan saat exception dibuat.
+        e.toString() mengembalikan representasi string dari exception, yang mencakup nama kelas exception dan pesan error.
+        e.printStackTrace() mencetak stack trace dari exception, yang menunjukkan jalannya eksekusi program hingga titik di mana exception dilempar.

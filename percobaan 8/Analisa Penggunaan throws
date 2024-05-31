@@ -1,0 +1,10 @@
+    Deklarasi throws di methodB:
+        methodB dideklarasikan untuk melempar IOException menggunakan throws IOException.
+        Dalam metode ini, ada operasi System.out.println(20 / 0) yang akan menyebabkan ArithmeticException karena pembagian dengan nol. Namun, ArithmeticException adalah subclass dari RuntimeException dan tidak perlu dideklarasikan dengan throws.
+
+    Deklarasi throws di main:
+        main method dideklarasikan untuk melempar IOException menggunakan throws IOException.
+        Karena methodB dideklarasikan untuk melempar IOException, main method juga harus menangani atau mendeklarasikan throws untuk IOException.
+
+    Potensi Error:
+        Saat c.methodB() dipanggil, akan terjadi ArithmeticException yang tidak ditangani karena tidak ada try-catch blok dalam metode methodB atau main.
